@@ -1,4 +1,5 @@
 // const express = require('express');
+// SE USA ESTA SINTAXIS YA QUE BABEL ESTÁ INSTALADO
 import express from 'express';
 import morgan from "morgan";
 import cors from "cors";
