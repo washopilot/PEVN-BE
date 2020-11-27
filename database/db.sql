@@ -6,26 +6,22 @@ CREATE TABLE professor(
     p_email TEXT NOT NULL UNIQUE,
     p_password TEXT NOT NULL
 );
-
 CREATE TABLE student (
     id_s SERIAL PRIMARY KEY,
     s_name TEXT NOT NULL,
     s_email TEXT NOT NULL UNIQUE,
     s_password TEXT NOT NULL
 );
-
 CREATE TABLE course (
     id_c SERIAL PRIMARY KEY,
     p_id INTEGER REFERENCES professor(id_p),
     c_name TEXT NOT NULL,
     c_description TEXT NOT NULL
 );
-
 CREATE TABLE studentvscourse (
     s_id INTEGER NOT NULL REFERENCES student(id_s),
     c_id INTEGER NOT NULL REFERENCES course(id_c)
 );
-
 CREATE TABLE assignment (
     id_a SERIAL PRIMARY KEY,
     c_id INTEGER NOT NULL REFERENCES course(id_c),
@@ -33,7 +29,6 @@ CREATE TABLE assignment (
     a_description TEXT,
     a_file TEXT NOT NULL
 );
-
 CREATE TABLE delivery (
     id_d SERIAL PRIMARY KEY,
     a_id INTEGER REFERENCES assignment(id_a),

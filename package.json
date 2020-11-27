@@ -1,5 +1,5 @@
 {
-  "name": "PEVN-be",
+  "name": "pevn-be",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cloudinary": "^1.23.0",
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
